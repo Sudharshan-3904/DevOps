@@ -10,13 +10,15 @@ const PREDEFINED_LOCATIONS = [
 ];
 
 export default function Header({ onLocationChange }) {
+  /* User & dropdown */
   const [loggedIn, setLoggedIn] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
-  const [currentLoc, setCurrentLoc] = useState(null);
+  /* Location handling */
+  const [currentLoc, setCurrentLoc] = useState(null); // string
   const [modalOpen, setModalOpen] = useState(false);
-  const [manualLoc, setManualLoc] = useState("");
 
+  /* Auto‑detect on first render (optional) */
   useEffect(() => {
     if (!currentLoc && "geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition(
@@ -26,27 +28,22 @@ export default function Header({ onLocationChange }) {
               pos.coords.longitude
             )}`
           ),
-        () => console.warn("Could not auto-detect location")
+        () => console.warn("Could not auto‑detect location")
       );
     }
   }, [currentLoc]);
 
-  const toggleLogin = () => {
-    setLoggedIn((prev) => !prev);
-  };
+  const toggleLogin = () => setLoggedIn((p) => !p);
 
   const detectLocation = () => {
-    if (!navigator.geolocation) {
-      alert("Geolocation is not supported by your browser");
-      return;
-    }
+    if (!navigator.geolocation) return alert("Geolocation not supported");
     navigator.geolocation.getCurrentPosition(
       (pos) => {
         const locString = `${Math.round(pos.coords.latitude)}, ${Math.round(
           pos.coords.longitude
         )}`;
         setCurrentLoc(locString);
-        onLocationChange && onLocationChange(locString);
+        onLocationChange?.(locString);
       },
       () => alert("Unable to retrieve your location")
     );
@@ -54,14 +51,16 @@ export default function Header({ onLocationChange }) {
 
   const handleSetLocation = (loc) => {
     setCurrentLoc(loc.name);
-    onLocationChange && onLocationChange(loc.name);
+    onLocationChange?.(loc.name);
     setModalOpen(false);
   };
 
   return (
     <header className="app-header">
+      {/* Logo / title */}
       <div className="logo">MyStream</div>
 
+      {/* Right side controls */}
       <div className="user-controls">
         <button
           className="dropdown-toggle"
@@ -71,6 +70,7 @@ export default function Header({ onLocationChange }) {
           <span style={{ marginLeft: 5 }}>{loggedIn ? "🔓" : "🔒"}</span>
         </button>
 
+        {/* Dropdown */}
         {dropdownOpen && (
           <div className="dropdown-menu">
             <button onClick={toggleLogin}>
@@ -82,6 +82,7 @@ export default function Header({ onLocationChange }) {
         )}
       </div>
 
+      {/* Manual‑select modal */}
       {modalOpen && (
         <div className="modal-backdrop" onClick={() => setModalOpen(false)}>
           <div className="modal" onClick={(e) => e.stopPropagation()}>

@@ -1,0 +1,5 @@
+.movies .cards {
+  display: flex;
+  overflow-x: auto;
+  padding: 8px 0;
+}

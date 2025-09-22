@@ -1,18 +1,15 @@
-import React from "react";
-import "./Category.css";
+import Card from "./Card";
+import "./Specials.css";
 
-const Specials = ({ specials }) => (
-  <section className="category">
-    <h2>Specials</h2>
-    <ul className="grid">
-      {specials.map((special) => (
-        <li key={special.id} className="card">
-          <img src={special.posterUrl} alt={special.title} />
-          <p>{special.title}</p>
-        </li>
-      ))}
-    </ul>
-  </section>
-);
-
-export default Specials;
+export default function Specials({ items }) {
+  return (
+    <section className="list specials">
+      <h2>Specials</h2>
+      <div className="cards">
+        {items.map((special) => (
+          <Card key={special.id} {...special} />
+        ))}
+      </div>
+    </section>
+  );
+}

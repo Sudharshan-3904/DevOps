@@ -1,28 +1,36 @@
 import React from "react";
-import Header from "./header";
-import Movies from "./components/movies";
-import TvShows from "./components/tvShows";
-import Specials from "./components/specials";
-import Originals from "./components/originals";
-import { sampleData } from "./assets/sampleData";
+import Movies from "./components/Movies";
+import TVShows from "./components/TVShows";
+import Specials from "./components/Specials";
+import Originals from "./components/Originals";
+import "./App.css";
 
-function App() {
-  const [location, setLocation] = useState("Unknown");
+const sampleData = {
+  movies: [
+    { id: 1, title: "Inception", poster: "/pics/inception.jpg" },
+    { id: 2, title: "The Matrix", poster: "/pics/matrix.jpg" },
+  ],
+  tvShows: [
+    { id: 101, title: "Breaking Bad", poster: "/pics/breakingbad.jpg" },
+    { id: 102, title: "Stranger Things", poster: "/pics/strangerthings.jpg" },
+  ],
+  specials: [
+    { id: 201, title: "The Oscars 2024", poster: "/pics/oscar.jpg" },
+    { id: 202, title: "New Year Countdown", poster: "/pics/newyear.jpg" },
+  ],
+  originals: [
+    { id: 301, title: "Squid Game", poster: "/pics/squidgame.jpg" },
+    { id: 302, title: "The Crown", poster: "/pics/crown.jpg" },
+  ],
+};
 
+export default function App() {
   return (
-    <div>
-      <Header onLocationChange={setLocation} />
-
-      <main style={{ marginTop: 70 }}>
-        <h2>Current location: {location}</h2>
-
-        <Movies movies={sampleData.movies} />
-        <TvShows shows={sampleData.shows} />
-        <Specials specials={sampleData.specials} />
-        <Originals originals={sampleData.originals} />
-      </main>
+    <div className="app">
+      <Movies items={sampleData.movies} />
+      <TVShows items={sampleData.tvShows} />
+      <Specials items={sampleData.specials} />
+      <Originals items={sampleData.originals} />
     </div>
   );
 }
-
-export default App;

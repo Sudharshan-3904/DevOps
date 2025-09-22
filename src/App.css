@@ -1,0 +1,15 @@
+.root {
+  width: 100%;
+}
+
+.app {
+  font-family: sans-serif;
+  background: #111; /* dark streaming‑app vibe */
+  color: #ddd;
+  padding: 20px;
+}
+
+.list h2 {
+  margin-bottom: 8px;
+  font-size: 1.25rem;
+}

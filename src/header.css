@@ -1,8 +1,7 @@
+/* Basic header bar */
 .app-header {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   height: 60px;
   background: #111;
   color: #fff;
@@ -13,91 +12,48 @@
   z-index: 1000;
 }
 
-.logo {
-  font-size: 1.4rem;
-  font-weight: bold;
-}
+/* Logo */
+.logo { font-size: 1.4rem; font-weight: bold; }
 
-.user-controls {
-  position: relative;
-}
+/* Right controls */
+.user-controls { position: relative; }
 .dropdown-toggle {
-  background: #222;
-  border: none;
-  color: #fff;
-  padding: 8px 12px;
-  cursor: pointer;
-  border-radius: 3px;
+  background: #222; border: none; color:#fff;
+  padding:8px 12px; cursor:pointer; border-radius:3px;
 }
-.dropdown-toggle:hover {
-  background: #333;
-}
+.dropdown-toggle:hover { background:#333; }
 
+/* Dropdown menu */
 .dropdown-menu {
-  position: absolute;
-  right: 0;
-  top: calc(100% + 4px);
-  background: #222;
-  border: 1px solid #444;
-  border-radius: 3px;
-  padding: 8px 0;
-  min-width: 140px;
+  position:absolute; right:0; top:calc(100% + 4px);
+  background:#222; border:1px solid #444;
+  border-radius:3px; padding:8px 0; min-width:140px;
 }
-.dropdown-menu button {
-  width: 100%;
-  background: none;
-  border: none;
-  color: #fff;
-  text-align: left;
-  padding: 6px 12px;
-  cursor: pointer;
+.dropdown-menu button{
+  width:100%; background:none; border:none;
+  color:#fff; text-align:left; padding:6px 12px; cursor:pointer;
 }
-.dropdown-menu button:hover {
-  background: #333;
-}
+.dropdown-menu button:hover{ background:#333; }
 
+/* Modal backdrop */
 .modal-backdrop {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2000;
+  position:fixed; inset:0; background:rgba(0,0,0,.5);
+  display:flex; justify-content:center; align-items:center;
+  z-index:2000;
 }
-.modal {
-  background: #fff;
-  color: #111;
-  padding: 1rem 1.2rem;
-  border-radius: 4px;
-  width: 280px;
-  text-align: left;
+.modal{
+  background:#fff; color:#111;
+  padding:1rem 1.2rem; border-radius:4px; width:280px;
+  text-align:left;
 }
-.location-list {
-  list-style: none;
-  margin: 12px 0;
-  padding: 0;
+.location-list { list-style:none; margin:12px 0; padding:0; }
+.location-list li button{
+  background:#eee; border:none; padding:6px 8px; width:100%;
+  text-align:left; cursor:pointer;
 }
-.location-list li button {
-  background: #eee;
-  border: none;
-  padding: 6px 8px;
-  width: 100%;
-  text-align: left;
-  cursor: pointer;
+.location-list li button:hover{ background:#ddd; }
+.close-btn{
+  margin-top:10px; background:#c00; color:#fff; border:none;
+  padding:6px 12px; border-radius:3px; cursor:pointer;
 }
-.location-list li button:hover {
-  background: #ddd;
-}
-.close-btn {
-  margin-top: 10px;
-  background: #c00;
-  color: #fff;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 3px;
-  cursor: pointer;
-}
-.close-btn:hover {
-  background: #900;
-}
+.close-btn:hover{ background:#900; }

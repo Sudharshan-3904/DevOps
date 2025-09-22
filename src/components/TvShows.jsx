@@ -1,18 +1,16 @@
-import React from "react";
-import "./Category.css";
+// src/components/TVShows.jsx
+import Card from "./Card";
+import "./TVShows.css";
 
-const TvShows = ({ shows }) => (
-  <section className="category">
-    <h2>TV Shows</h2>
-    <ul className="grid">
-      {shows.map((show) => (
-        <li key={show.id} className="card">
-          <img src={show.posterUrl} alt={show.title} />
-          <p>{show.title}</p>
-        </li>
-      ))}
-    </ul>
-  </section>
-);
-
-export default TvShows;
+export default function TVShows({ items }) {
+  return (
+    <section className="list tv-shows">
+      <h2>TV Shows</h2>
+      <div className="cards">
+        {items.map((show) => (
+          <Card key={show.id} {...show} />
+        ))}
+      </div>
+    </section>
+  );
+}

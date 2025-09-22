@@ -1,0 +1,11 @@
+.originals .cards {
+  display: flex;
+  overflow-x: auto;
+  padding: 8px 0;
+}
+
+.card__title::after {
+  content: " Original";
+  font-size: 0.75rem;
+  color: #ff3c00;
+}

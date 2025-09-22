@@ -1,18 +1,16 @@
-import React from "react";
-import "./Category.css";
 
-const Movies = ({ movies }) => (
-  <section className="category">
-    <h2>Movies</h2>
-    <ul className="grid">
-      {movies.map((movie) => (
-        <li key={movie.id} className="card">
-          <img src={movie.posterUrl} alt={movie.title} />
-          <p>{movie.title}</p>
-        </li>
-      ))}
-    </ul>
-  </section>
-);
+import Card from "./Card";
+import "./Movies.css";
 
-export default Movies;
+export default function Movies({ items }) {
+  return (
+    <section className="list movies">
+      <h2>Movies</h2>
+      <div className="cards">
+        {items.map((movie) => (
+          <Card key={movie.id} {...movie} />
+        ))}
+      </div>
+    </section>
+  );
+}
