@@ -23,7 +23,7 @@ This project is a small React app scaffolded with Vite. It renders four content 
 
 ## Project Structure
 
-```
+```files
 ├─ index.html
 ├─ src
 │  ├─ main.jsx              # App entry
@@ -49,13 +49,13 @@ This project is a small React app scaffolded with Vite. It renders four content 
 
 ### Install
 
-```
+```bash
 npm install
 ```
 
 ### Run (development)
 
-```
+```bash
 npm run dev
 ```
 
@@ -63,13 +63,13 @@ Open `http://localhost:5173` in your browser.
 
 ### Build (production)
 
-```
+```bash
 npm run build
 ```
 
 ### Preview built app
 
-```
+```bash
 npm run preview
 ```
 
@@ -79,13 +79,13 @@ This repo includes a production‑ready multi‑stage Dockerfile (Node build →
 
 ### Build image
 
-```
+```bash
 docker build -t mystream:latest .
 ```
 
 ### Run container
 
-```
+```bash
 docker run --rm -p 8080:80 mystream:latest
 ```
 
@@ -128,5 +128,3 @@ The fallback file `public/pics/placeholder.svg` is used when an image fails to l
 - Real data source integration (REST/GraphQL) and loading states
 
 ---
-
-Maintained as a minimal, clean starter for streaming‑style UIs.
