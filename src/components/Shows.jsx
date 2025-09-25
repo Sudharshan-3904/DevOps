@@ -1,10 +1,10 @@
 // src/components/TVShows.jsx
 import Card from "./Card";
-import "./TvShows.css";
+import "./Shows.css";
 
 export default function TVShows({ items }) {
   return (
-    <section className="list tv-shows">
+    <section className="list shows">
       <h2>TV Shows</h2>
       <div className="cards">
         {items.map((show) => (

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Movies from "./components/Movies";
-import TVShows from "./components/TvShows";
+import TVShows from "./components/Shows";
 import Specials from "./components/Specials";
 import Originals from "./components/Originals";
 import Header from "./header";
