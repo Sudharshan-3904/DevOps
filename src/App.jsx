@@ -44,23 +44,23 @@ export default function App() {
           posterUrl: m.posterUrl,
           streamProce: m.streamProce,
         })),
-        tvShows: sampleData.shows.map((m) => ({
-          id: m.id,
-          title: m.title,
-          posterUrl: m.posterUrl,
-          streamProce: m.streamProce,
+        tvShows: sampleData.shows.map((sh) => ({
+          id: sh.id,
+          title: sh.title,
+          posterUrl: sh.posterUrl,
+          streamProce: sh.streamProce,
         })),
-        specials: sampleData.specials.map((m) => ({
-          id: m.id,
-          title: m.title,
-          posterUrl: m.posterUrl,
-          streamProce: m.streamProce,
+        specials: sampleData.specials.map((sp) => ({
+          id: sp.id,
+          title: sp.title,
+          posterUrl: sp.posterUrl,
+          streamProce: sp.streamProce,
         })),
-        originals: sampleData.originals.map((m) => ({
-          id: m.id,
-          title: m.title,
-          posterUrl: m.posterUrl,
-          streamProce: m.streamProce,
+        originals: sampleData.originals.map((o) => ({
+          id: o.id,
+          title: o.title,
+          posterUrl: o.posterUrl,
+          streamProce: o.streamProce,
         })),
       };
     }
