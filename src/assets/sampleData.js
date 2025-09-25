@@ -63,13 +63,6 @@ export const sampleData = {
       streamProce: "$5.99",
       offerPrice: "$3.99",
     },
-    {
-      id: 10,
-      title: "Fight Club",
-      posterUrl: "https://placehold.co/200x300?text=Fight+Club",
-      streamProce: "$5.99",
-      offerPrice: "$3.99",
-    },
   ],
 
   shows: [
@@ -133,13 +126,6 @@ export const sampleData = {
       id: 109,
       title: "Sherlock",
       posterUrl: "https://placehold.co/200x300?text=Sherlock",
-      streamProce: "$5.99",
-      offerPrice: "$3.99",
-    },
-    {
-      id: 110,
-      title: "Westworld",
-      posterUrl: "https://placehold.co/200x300?text=Westworld",
       streamProce: "$5.99",
       offerPrice: "$3.99",
     },
@@ -209,13 +195,6 @@ export const sampleData = {
       streamProce: "$5.99",
       offerPrice: "$3.99",
     },
-    {
-      id: 210,
-      title: "Festival Highlights",
-      posterUrl: "https://placehold.co/200x300?text=Festival",
-      streamProce: "$5.99",
-      offerPrice: "$3.99",
-    },
   ],
 
   originals: [
@@ -279,13 +258,6 @@ export const sampleData = {
       id: 309,
       title: "Future Tech Preview",
       posterUrl: "https://placehold.co/200x300?text=Tech+Preview",
-      streamProce: "$5.99",
-      offerPrice: "$3.99",
-    },
-    {
-      id: 310,
-      title: "Historical Drama Series",
-      posterUrl: "https://placehold.co/200x300?text=History+Drama",
       streamProce: "$5.99",
       offerPrice: "$3.99",
     },

@@ -1,6 +1,6 @@
 // src/components/TVShows.jsx
 import Card from "./Card";
-import "./TVShows.css";
+import "./Shows.css";
 
 export default function TVShows({ items }) {
   return (
